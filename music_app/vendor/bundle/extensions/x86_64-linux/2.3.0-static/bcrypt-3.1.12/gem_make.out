@@ -1,0 +1,19 @@
+current directory: /media/cornelis/Storage/Home/Documents/Academic/AppAcademy/Projects/W4D4/music_app/vendor/bundle/gems/bcrypt-3.1.12/ext/mri
+/home/cornelis/.rbenv/versions/2.3.1/bin/ruby -r ./siteconf20180913-30286-cf1l0c.rb extconf.rb
+creating Makefile
+
+current directory: /media/cornelis/Storage/Home/Documents/Academic/AppAcademy/Projects/W4D4/music_app/vendor/bundle/gems/bcrypt-3.1.12/ext/mri
+make "DESTDIR=" clean
+
+current directory: /media/cornelis/Storage/Home/Documents/Academic/AppAcademy/Projects/W4D4/music_app/vendor/bundle/gems/bcrypt-3.1.12/ext/mri
+make "DESTDIR="
+compiling bcrypt_ext.c
+compiling crypt.c
+compiling crypt_blowfish.c
+compiling crypt_gensalt.c
+compiling wrapper.c
+linking shared-object bcrypt_ext.so
+
+current directory: /media/cornelis/Storage/Home/Documents/Academic/AppAcademy/Projects/W4D4/music_app/vendor/bundle/gems/bcrypt-3.1.12/ext/mri
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 bcrypt_ext.so ./.gem.20180913-30286-1tcxe8x
