@@ -4304,3 +4304,1573 @@ Processing by UsersController#new as HTML
 Completed 200 OK in 29ms (Views: 25.1ms | ActiveRecord: 3.8ms)
 
 
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4505726345591715405)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateBands (20180913222451)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (21.0ms)[0m  [1m[35mCREATE TABLE "bands" ("id" bigserial primary key, "name" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20180913222451_create_bands.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180913222451"]]
+  ↳ bin/rails:9
+  [1m[35m (4.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_advisory_unlock(4505726345591715405)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/bundle/bin/annotate:23
+Started GET "/" for 127.0.0.1 at 2018-09-13 15:35:57 -0700
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/bundle/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by Rails::WelcomeController#index as */*
+  Rendering vendor/bundle/gems/railties-5.2.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered vendor/bundle/gems/railties-5.2.1/lib/rails/templates/rails/welcome/index.html.erb (1.5ms)
+Completed 200 OK in 22ms (Views: 11.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/band/index" for 127.0.0.1 at 2018-09-13 15:50:16 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/band/index"):
+  
+vendor/bundle/gems/actionpack-5.2.1/lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+vendor/bundle/gems/web-console-3.7.0/lib/web_console/middleware.rb:135:in `call_app'
+vendor/bundle/gems/web-console-3.7.0/lib/web_console/middleware.rb:30:in `block in call'
+vendor/bundle/gems/web-console-3.7.0/lib/web_console/middleware.rb:20:in `catch'
+vendor/bundle/gems/web-console-3.7.0/lib/web_console/middleware.rb:20:in `call'
+vendor/bundle/gems/actionpack-5.2.1/lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+vendor/bundle/gems/railties-5.2.1/lib/rails/rack/logger.rb:38:in `call_app'
+vendor/bundle/gems/railties-5.2.1/lib/rails/rack/logger.rb:26:in `block in call'
+vendor/bundle/gems/activesupport-5.2.1/lib/active_support/tagged_logging.rb:71:in `block in tagged'
+vendor/bundle/gems/activesupport-5.2.1/lib/active_support/tagged_logging.rb:28:in `tagged'
+vendor/bundle/gems/activesupport-5.2.1/lib/active_support/tagged_logging.rb:71:in `tagged'
+vendor/bundle/gems/railties-5.2.1/lib/rails/rack/logger.rb:26:in `call'
+vendor/bundle/gems/sprockets-rails-3.2.1/lib/sprockets/rails/quiet_assets.rb:13:in `call'
+vendor/bundle/gems/actionpack-5.2.1/lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+vendor/bundle/gems/actionpack-5.2.1/lib/action_dispatch/middleware/request_id.rb:27:in `call'
+vendor/bundle/gems/rack-2.0.5/lib/rack/method_override.rb:22:in `call'
+vendor/bundle/gems/rack-2.0.5/lib/rack/runtime.rb:22:in `call'
+vendor/bundle/gems/activesupport-5.2.1/lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+vendor/bundle/gems/actionpack-5.2.1/lib/action_dispatch/middleware/executor.rb:14:in `call'
+vendor/bundle/gems/actionpack-5.2.1/lib/action_dispatch/middleware/static.rb:127:in `call'
+vendor/bundle/gems/rack-2.0.5/lib/rack/sendfile.rb:111:in `call'
+vendor/bundle/gems/railties-5.2.1/lib/rails/engine.rb:524:in `call'
+vendor/bundle/gems/puma-3.12.0/lib/puma/configuration.rb:225:in `call'
+vendor/bundle/gems/puma-3.12.0/lib/puma/server.rb:658:in `handle_request'
+vendor/bundle/gems/puma-3.12.0/lib/puma/server.rb:472:in `process_client'
+vendor/bundle/gems/puma-3.12.0/lib/puma/server.rb:332:in `block in run'
+vendor/bundle/gems/puma-3.12.0/lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/bands/index" for 127.0.0.1 at 2018-09-13 15:50:21 -0700
+  
+SyntaxError (compile error):
+  
+compile error
+vendor/bundle/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:50:in `load'
+vendor/bundle/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:50:in `load'
+vendor/bundle/gems/activesupport-5.2.1/lib/active_support/dependencies.rb:472:in `block in load_file'
+vendor/bundle/gems/activesupport-5.2.1/lib/active_support/dependencies.rb:657:in `new_constants_in'
+vendor/bundle/gems/activesupport-5.2.1/lib/active_support/dependencies.rb:471:in `load_file'
+vendor/bundle/gems/activesupport-5.2.1/lib/active_support/dependencies.rb:369:in `block in require_or_load'
+vendor/bundle/gems/activesupport-5.2.1/lib/active_support/dependencies.rb:37:in `block in load_interlock'
+vendor/bundle/gems/activesupport-5.2.1/lib/active_support/dependencies/interlock.rb:14:in `block in loading'
+vendor/bundle/gems/activesupport-5.2.1/lib/active_support/concurrency/share_lock.rb:151:in `exclusive'
+vendor/bundle/gems/activesupport-5.2.1/lib/active_support/dependencies/interlock.rb:13:in `loading'
+vendor/bundle/gems/activesupport-5.2.1/lib/active_support/dependencies.rb:37:in `load_interlock'
+vendor/bundle/gems/activesupport-5.2.1/lib/active_support/dependencies.rb:352:in `require_or_load'
+vendor/bundle/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/active_support.rb:46:in `block in require_or_load'
+vendor/bundle/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/active_support.rb:16:in `allow_bootsnap_retry'
+vendor/bundle/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/active_support.rb:45:in `require_or_load'
+vendor/bundle/gems/activesupport-5.2.1/lib/active_support/dependencies.rb:506:in `load_missing_constant'
+vendor/bundle/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/active_support.rb:58:in `block in load_missing_constant'
+vendor/bundle/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/active_support.rb:16:in `allow_bootsnap_retry'
+vendor/bundle/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/active_support.rb:57:in `load_missing_constant'
+vendor/bundle/gems/activesupport-5.2.1/lib/active_support/dependencies.rb:193:in `const_missing'
+vendor/bundle/gems/activesupport-5.2.1/lib/active_support/inflector/methods.rb:283:in `const_get'
+vendor/bundle/gems/activesupport-5.2.1/lib/active_support/inflector/methods.rb:283:in `block in constantize'
+vendor/bundle/gems/activesupport-5.2.1/lib/active_support/inflector/methods.rb:281:in `each'
+vendor/bundle/gems/activesupport-5.2.1/lib/active_support/inflector/methods.rb:281:in `inject'
+vendor/bundle/gems/activesupport-5.2.1/lib/active_support/inflector/methods.rb:281:in `constantize'
+vendor/bundle/gems/activesupport-5.2.1/lib/active_support/dependencies.rb:578:in `get'
+vendor/bundle/gems/activesupport-5.2.1/lib/active_support/dependencies.rb:609:in `constantize'
+vendor/bundle/gems/actionpack-5.2.1/lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+vendor/bundle/gems/actionpack-5.2.1/lib/action_dispatch/http/parameters.rb:101:in `binary_params_for?'
+vendor/bundle/gems/actionpack-5.2.1/lib/action_dispatch/http/parameters.rb:92:in `set_binary_encoding'
+vendor/bundle/gems/actionpack-5.2.1/lib/action_dispatch/http/parameters.rb:69:in `path_parameters='
+vendor/bundle/gems/actionpack-5.2.1/lib/action_dispatch/journey/router.rb:50:in `block in serve'
+vendor/bundle/gems/actionpack-5.2.1/lib/action_dispatch/journey/router.rb:35:in `each'
+vendor/bundle/gems/actionpack-5.2.1/lib/action_dispatch/journey/router.rb:35:in `serve'
+vendor/bundle/gems/actionpack-5.2.1/lib/action_dispatch/routing/route_set.rb:840:in `call'
+vendor/bundle/gems/rack-2.0.5/lib/rack/tempfile_reaper.rb:15:in `call'
+vendor/bundle/gems/rack-2.0.5/lib/rack/etag.rb:25:in `call'
+vendor/bundle/gems/rack-2.0.5/lib/rack/conditional_get.rb:25:in `call'
+vendor/bundle/gems/rack-2.0.5/lib/rack/head.rb:12:in `call'
+vendor/bundle/gems/actionpack-5.2.1/lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+vendor/bundle/gems/rack-2.0.5/lib/rack/session/abstract/id.rb:232:in `context'
+vendor/bundle/gems/rack-2.0.5/lib/rack/session/abstract/id.rb:226:in `call'
+vendor/bundle/gems/actionpack-5.2.1/lib/action_dispatch/middleware/cookies.rb:670:in `call'
+vendor/bundle/gems/activerecord-5.2.1/lib/active_record/migration.rb:559:in `call'
+vendor/bundle/gems/actionpack-5.2.1/lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+vendor/bundle/gems/activesupport-5.2.1/lib/active_support/callbacks.rb:98:in `run_callbacks'
+vendor/bundle/gems/actionpack-5.2.1/lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+vendor/bundle/gems/actionpack-5.2.1/lib/action_dispatch/middleware/executor.rb:14:in `call'
+vendor/bundle/gems/actionpack-5.2.1/lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+vendor/bundle/gems/web-console-3.7.0/lib/web_console/middleware.rb:135:in `call_app'
+vendor/bundle/gems/web-console-3.7.0/lib/web_console/middleware.rb:30:in `block in call'
+vendor/bundle/gems/web-console-3.7.0/lib/web_console/middleware.rb:20:in `catch'
+vendor/bundle/gems/web-console-3.7.0/lib/web_console/middleware.rb:20:in `call'
+vendor/bundle/gems/actionpack-5.2.1/lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+vendor/bundle/gems/railties-5.2.1/lib/rails/rack/logger.rb:38:in `call_app'
+vendor/bundle/gems/railties-5.2.1/lib/rails/rack/logger.rb:26:in `block in call'
+vendor/bundle/gems/activesupport-5.2.1/lib/active_support/tagged_logging.rb:71:in `block in tagged'
+vendor/bundle/gems/activesupport-5.2.1/lib/active_support/tagged_logging.rb:28:in `tagged'
+vendor/bundle/gems/activesupport-5.2.1/lib/active_support/tagged_logging.rb:71:in `tagged'
+vendor/bundle/gems/railties-5.2.1/lib/rails/rack/logger.rb:26:in `call'
+vendor/bundle/gems/sprockets-rails-3.2.1/lib/sprockets/rails/quiet_assets.rb:13:in `call'
+vendor/bundle/gems/actionpack-5.2.1/lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+vendor/bundle/gems/actionpack-5.2.1/lib/action_dispatch/middleware/request_id.rb:27:in `call'
+vendor/bundle/gems/rack-2.0.5/lib/rack/method_override.rb:22:in `call'
+vendor/bundle/gems/rack-2.0.5/lib/rack/runtime.rb:22:in `call'
+vendor/bundle/gems/activesupport-5.2.1/lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+vendor/bundle/gems/actionpack-5.2.1/lib/action_dispatch/middleware/executor.rb:14:in `call'
+vendor/bundle/gems/actionpack-5.2.1/lib/action_dispatch/middleware/static.rb:127:in `call'
+vendor/bundle/gems/rack-2.0.5/lib/rack/sendfile.rb:111:in `call'
+vendor/bundle/gems/railties-5.2.1/lib/rails/engine.rb:524:in `call'
+vendor/bundle/gems/puma-3.12.0/lib/puma/configuration.rb:225:in `call'
+vendor/bundle/gems/puma-3.12.0/lib/puma/server.rb:658:in `handle_request'
+vendor/bundle/gems/puma-3.12.0/lib/puma/server.rb:472:in `process_client'
+vendor/bundle/gems/puma-3.12.0/lib/puma/server.rb:332:in `block in run'
+vendor/bundle/gems/puma-3.12.0/lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/bands" for 127.0.0.1 at 2018-09-13 15:50:32 -0700
+  
+LoadError (Unable to autoload constant BandsController, expected /media/cornelis/Storage/Home/Documents/Academic/AppAcademy/Projects/W4D4/music_app/app/controllers/bands_controller.rb to define it):
+  
+vendor/bundle/gems/activesupport-5.2.1/lib/active_support/dependencies.rb:507:in `load_missing_constant'
+vendor/bundle/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/active_support.rb:58:in `block in load_missing_constant'
+vendor/bundle/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/active_support.rb:16:in `allow_bootsnap_retry'
+vendor/bundle/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/active_support.rb:57:in `load_missing_constant'
+vendor/bundle/gems/activesupport-5.2.1/lib/active_support/dependencies.rb:193:in `const_missing'
+vendor/bundle/gems/activesupport-5.2.1/lib/active_support/inflector/methods.rb:283:in `const_get'
+vendor/bundle/gems/activesupport-5.2.1/lib/active_support/inflector/methods.rb:283:in `block in constantize'
+vendor/bundle/gems/activesupport-5.2.1/lib/active_support/inflector/methods.rb:281:in `each'
+vendor/bundle/gems/activesupport-5.2.1/lib/active_support/inflector/methods.rb:281:in `inject'
+vendor/bundle/gems/activesupport-5.2.1/lib/active_support/inflector/methods.rb:281:in `constantize'
+vendor/bundle/gems/activesupport-5.2.1/lib/active_support/dependencies.rb:578:in `get'
+vendor/bundle/gems/activesupport-5.2.1/lib/active_support/dependencies.rb:609:in `constantize'
+vendor/bundle/gems/actionpack-5.2.1/lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+vendor/bundle/gems/actionpack-5.2.1/lib/action_dispatch/http/parameters.rb:101:in `binary_params_for?'
+vendor/bundle/gems/actionpack-5.2.1/lib/action_dispatch/http/parameters.rb:92:in `set_binary_encoding'
+vendor/bundle/gems/actionpack-5.2.1/lib/action_dispatch/http/parameters.rb:69:in `path_parameters='
+vendor/bundle/gems/actionpack-5.2.1/lib/action_dispatch/journey/router.rb:50:in `block in serve'
+vendor/bundle/gems/actionpack-5.2.1/lib/action_dispatch/journey/router.rb:35:in `each'
+vendor/bundle/gems/actionpack-5.2.1/lib/action_dispatch/journey/router.rb:35:in `serve'
+vendor/bundle/gems/actionpack-5.2.1/lib/action_dispatch/routing/route_set.rb:840:in `call'
+vendor/bundle/gems/rack-2.0.5/lib/rack/tempfile_reaper.rb:15:in `call'
+vendor/bundle/gems/rack-2.0.5/lib/rack/etag.rb:25:in `call'
+vendor/bundle/gems/rack-2.0.5/lib/rack/conditional_get.rb:25:in `call'
+vendor/bundle/gems/rack-2.0.5/lib/rack/head.rb:12:in `call'
+vendor/bundle/gems/actionpack-5.2.1/lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+vendor/bundle/gems/rack-2.0.5/lib/rack/session/abstract/id.rb:232:in `context'
+vendor/bundle/gems/rack-2.0.5/lib/rack/session/abstract/id.rb:226:in `call'
+vendor/bundle/gems/actionpack-5.2.1/lib/action_dispatch/middleware/cookies.rb:670:in `call'
+vendor/bundle/gems/activerecord-5.2.1/lib/active_record/migration.rb:559:in `call'
+vendor/bundle/gems/actionpack-5.2.1/lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+vendor/bundle/gems/activesupport-5.2.1/lib/active_support/callbacks.rb:98:in `run_callbacks'
+vendor/bundle/gems/actionpack-5.2.1/lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+vendor/bundle/gems/actionpack-5.2.1/lib/action_dispatch/middleware/executor.rb:14:in `call'
+vendor/bundle/gems/actionpack-5.2.1/lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+vendor/bundle/gems/web-console-3.7.0/lib/web_console/middleware.rb:135:in `call_app'
+vendor/bundle/gems/web-console-3.7.0/lib/web_console/middleware.rb:30:in `block in call'
+vendor/bundle/gems/web-console-3.7.0/lib/web_console/middleware.rb:20:in `catch'
+vendor/bundle/gems/web-console-3.7.0/lib/web_console/middleware.rb:20:in `call'
+vendor/bundle/gems/actionpack-5.2.1/lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+vendor/bundle/gems/railties-5.2.1/lib/rails/rack/logger.rb:38:in `call_app'
+vendor/bundle/gems/railties-5.2.1/lib/rails/rack/logger.rb:26:in `block in call'
+vendor/bundle/gems/activesupport-5.2.1/lib/active_support/tagged_logging.rb:71:in `block in tagged'
+vendor/bundle/gems/activesupport-5.2.1/lib/active_support/tagged_logging.rb:28:in `tagged'
+vendor/bundle/gems/activesupport-5.2.1/lib/active_support/tagged_logging.rb:71:in `tagged'
+vendor/bundle/gems/railties-5.2.1/lib/rails/rack/logger.rb:26:in `call'
+vendor/bundle/gems/sprockets-rails-3.2.1/lib/sprockets/rails/quiet_assets.rb:13:in `call'
+vendor/bundle/gems/actionpack-5.2.1/lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+vendor/bundle/gems/actionpack-5.2.1/lib/action_dispatch/middleware/request_id.rb:27:in `call'
+vendor/bundle/gems/rack-2.0.5/lib/rack/method_override.rb:22:in `call'
+vendor/bundle/gems/rack-2.0.5/lib/rack/runtime.rb:22:in `call'
+vendor/bundle/gems/activesupport-5.2.1/lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+vendor/bundle/gems/actionpack-5.2.1/lib/action_dispatch/middleware/executor.rb:14:in `call'
+vendor/bundle/gems/actionpack-5.2.1/lib/action_dispatch/middleware/static.rb:127:in `call'
+vendor/bundle/gems/rack-2.0.5/lib/rack/sendfile.rb:111:in `call'
+vendor/bundle/gems/railties-5.2.1/lib/rails/engine.rb:524:in `call'
+vendor/bundle/gems/puma-3.12.0/lib/puma/configuration.rb:225:in `call'
+vendor/bundle/gems/puma-3.12.0/lib/puma/server.rb:658:in `handle_request'
+vendor/bundle/gems/puma-3.12.0/lib/puma/server.rb:472:in `process_client'
+vendor/bundle/gems/puma-3.12.0/lib/puma/server.rb:332:in `block in run'
+vendor/bundle/gems/puma-3.12.0/lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/bands" for 127.0.0.1 at 2018-09-13 15:54:39 -0700
+  
+SyntaxError (compile error):
+  
+compile error
+vendor/bundle/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:50:in `load'
+vendor/bundle/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:50:in `load'
+vendor/bundle/gems/activesupport-5.2.1/lib/active_support/dependencies.rb:472:in `block in load_file'
+vendor/bundle/gems/activesupport-5.2.1/lib/active_support/dependencies.rb:657:in `new_constants_in'
+vendor/bundle/gems/activesupport-5.2.1/lib/active_support/dependencies.rb:471:in `load_file'
+vendor/bundle/gems/activesupport-5.2.1/lib/active_support/dependencies.rb:369:in `block in require_or_load'
+vendor/bundle/gems/activesupport-5.2.1/lib/active_support/dependencies.rb:37:in `block in load_interlock'
+vendor/bundle/gems/activesupport-5.2.1/lib/active_support/dependencies/interlock.rb:14:in `block in loading'
+vendor/bundle/gems/activesupport-5.2.1/lib/active_support/concurrency/share_lock.rb:151:in `exclusive'
+vendor/bundle/gems/activesupport-5.2.1/lib/active_support/dependencies/interlock.rb:13:in `loading'
+vendor/bundle/gems/activesupport-5.2.1/lib/active_support/dependencies.rb:37:in `load_interlock'
+vendor/bundle/gems/activesupport-5.2.1/lib/active_support/dependencies.rb:352:in `require_or_load'
+vendor/bundle/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/active_support.rb:46:in `block in require_or_load'
+vendor/bundle/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/active_support.rb:16:in `allow_bootsnap_retry'
+vendor/bundle/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/active_support.rb:45:in `require_or_load'
+vendor/bundle/gems/activesupport-5.2.1/lib/active_support/dependencies.rb:506:in `load_missing_constant'
+vendor/bundle/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/active_support.rb:58:in `block in load_missing_constant'
+vendor/bundle/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/active_support.rb:16:in `allow_bootsnap_retry'
+vendor/bundle/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/active_support.rb:57:in `load_missing_constant'
+vendor/bundle/gems/activesupport-5.2.1/lib/active_support/dependencies.rb:193:in `const_missing'
+vendor/bundle/gems/activesupport-5.2.1/lib/active_support/inflector/methods.rb:283:in `const_get'
+vendor/bundle/gems/activesupport-5.2.1/lib/active_support/inflector/methods.rb:283:in `block in constantize'
+vendor/bundle/gems/activesupport-5.2.1/lib/active_support/inflector/methods.rb:281:in `each'
+vendor/bundle/gems/activesupport-5.2.1/lib/active_support/inflector/methods.rb:281:in `inject'
+vendor/bundle/gems/activesupport-5.2.1/lib/active_support/inflector/methods.rb:281:in `constantize'
+vendor/bundle/gems/activesupport-5.2.1/lib/active_support/dependencies.rb:578:in `get'
+vendor/bundle/gems/activesupport-5.2.1/lib/active_support/dependencies.rb:609:in `constantize'
+vendor/bundle/gems/actionpack-5.2.1/lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+vendor/bundle/gems/actionpack-5.2.1/lib/action_dispatch/http/parameters.rb:101:in `binary_params_for?'
+vendor/bundle/gems/actionpack-5.2.1/lib/action_dispatch/http/parameters.rb:92:in `set_binary_encoding'
+vendor/bundle/gems/actionpack-5.2.1/lib/action_dispatch/http/parameters.rb:69:in `path_parameters='
+vendor/bundle/gems/actionpack-5.2.1/lib/action_dispatch/journey/router.rb:50:in `block in serve'
+vendor/bundle/gems/actionpack-5.2.1/lib/action_dispatch/journey/router.rb:35:in `each'
+vendor/bundle/gems/actionpack-5.2.1/lib/action_dispatch/journey/router.rb:35:in `serve'
+vendor/bundle/gems/actionpack-5.2.1/lib/action_dispatch/routing/route_set.rb:840:in `call'
+vendor/bundle/gems/rack-2.0.5/lib/rack/tempfile_reaper.rb:15:in `call'
+vendor/bundle/gems/rack-2.0.5/lib/rack/etag.rb:25:in `call'
+vendor/bundle/gems/rack-2.0.5/lib/rack/conditional_get.rb:25:in `call'
+vendor/bundle/gems/rack-2.0.5/lib/rack/head.rb:12:in `call'
+vendor/bundle/gems/actionpack-5.2.1/lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+vendor/bundle/gems/rack-2.0.5/lib/rack/session/abstract/id.rb:232:in `context'
+vendor/bundle/gems/rack-2.0.5/lib/rack/session/abstract/id.rb:226:in `call'
+vendor/bundle/gems/actionpack-5.2.1/lib/action_dispatch/middleware/cookies.rb:670:in `call'
+vendor/bundle/gems/activerecord-5.2.1/lib/active_record/migration.rb:559:in `call'
+vendor/bundle/gems/actionpack-5.2.1/lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+vendor/bundle/gems/activesupport-5.2.1/lib/active_support/callbacks.rb:98:in `run_callbacks'
+vendor/bundle/gems/actionpack-5.2.1/lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+vendor/bundle/gems/actionpack-5.2.1/lib/action_dispatch/middleware/executor.rb:14:in `call'
+vendor/bundle/gems/actionpack-5.2.1/lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+vendor/bundle/gems/web-console-3.7.0/lib/web_console/middleware.rb:135:in `call_app'
+vendor/bundle/gems/web-console-3.7.0/lib/web_console/middleware.rb:30:in `block in call'
+vendor/bundle/gems/web-console-3.7.0/lib/web_console/middleware.rb:20:in `catch'
+vendor/bundle/gems/web-console-3.7.0/lib/web_console/middleware.rb:20:in `call'
+vendor/bundle/gems/actionpack-5.2.1/lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+vendor/bundle/gems/railties-5.2.1/lib/rails/rack/logger.rb:38:in `call_app'
+vendor/bundle/gems/railties-5.2.1/lib/rails/rack/logger.rb:26:in `block in call'
+vendor/bundle/gems/activesupport-5.2.1/lib/active_support/tagged_logging.rb:71:in `block in tagged'
+vendor/bundle/gems/activesupport-5.2.1/lib/active_support/tagged_logging.rb:28:in `tagged'
+vendor/bundle/gems/activesupport-5.2.1/lib/active_support/tagged_logging.rb:71:in `tagged'
+vendor/bundle/gems/railties-5.2.1/lib/rails/rack/logger.rb:26:in `call'
+vendor/bundle/gems/sprockets-rails-3.2.1/lib/sprockets/rails/quiet_assets.rb:13:in `call'
+vendor/bundle/gems/actionpack-5.2.1/lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+vendor/bundle/gems/actionpack-5.2.1/lib/action_dispatch/middleware/request_id.rb:27:in `call'
+vendor/bundle/gems/rack-2.0.5/lib/rack/method_override.rb:22:in `call'
+vendor/bundle/gems/rack-2.0.5/lib/rack/runtime.rb:22:in `call'
+vendor/bundle/gems/activesupport-5.2.1/lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+vendor/bundle/gems/actionpack-5.2.1/lib/action_dispatch/middleware/executor.rb:14:in `call'
+vendor/bundle/gems/actionpack-5.2.1/lib/action_dispatch/middleware/static.rb:127:in `call'
+vendor/bundle/gems/rack-2.0.5/lib/rack/sendfile.rb:111:in `call'
+vendor/bundle/gems/railties-5.2.1/lib/rails/engine.rb:524:in `call'
+vendor/bundle/gems/puma-3.12.0/lib/puma/configuration.rb:225:in `call'
+vendor/bundle/gems/puma-3.12.0/lib/puma/server.rb:658:in `handle_request'
+vendor/bundle/gems/puma-3.12.0/lib/puma/server.rb:472:in `process_client'
+vendor/bundle/gems/puma-3.12.0/lib/puma/server.rb:332:in `block in run'
+vendor/bundle/gems/puma-3.12.0/lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2018-09-13 15:54:59 -0700
+Processing by Rails::WelcomeController#index as HTML
+  Rendering vendor/bundle/gems/railties-5.2.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered vendor/bundle/gems/railties-5.2.1/lib/rails/templates/rails/welcome/index.html.erb (3.0ms)
+Completed 200 OK in 10ms (Views: 6.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/bands" for 127.0.0.1 at 2018-09-13 15:55:03 -0700
+  
+LoadError (Unable to autoload constant BandsController, expected /media/cornelis/Storage/Home/Documents/Academic/AppAcademy/Projects/W4D4/music_app/app/controllers/bands_controller.rb to define it):
+  
+vendor/bundle/gems/activesupport-5.2.1/lib/active_support/dependencies.rb:507:in `load_missing_constant'
+vendor/bundle/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/active_support.rb:58:in `block in load_missing_constant'
+vendor/bundle/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/active_support.rb:16:in `allow_bootsnap_retry'
+vendor/bundle/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/active_support.rb:57:in `load_missing_constant'
+vendor/bundle/gems/activesupport-5.2.1/lib/active_support/dependencies.rb:193:in `const_missing'
+vendor/bundle/gems/activesupport-5.2.1/lib/active_support/inflector/methods.rb:283:in `const_get'
+vendor/bundle/gems/activesupport-5.2.1/lib/active_support/inflector/methods.rb:283:in `block in constantize'
+vendor/bundle/gems/activesupport-5.2.1/lib/active_support/inflector/methods.rb:281:in `each'
+vendor/bundle/gems/activesupport-5.2.1/lib/active_support/inflector/methods.rb:281:in `inject'
+vendor/bundle/gems/activesupport-5.2.1/lib/active_support/inflector/methods.rb:281:in `constantize'
+vendor/bundle/gems/activesupport-5.2.1/lib/active_support/dependencies.rb:578:in `get'
+vendor/bundle/gems/activesupport-5.2.1/lib/active_support/dependencies.rb:609:in `constantize'
+vendor/bundle/gems/actionpack-5.2.1/lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+vendor/bundle/gems/actionpack-5.2.1/lib/action_dispatch/http/parameters.rb:101:in `binary_params_for?'
+vendor/bundle/gems/actionpack-5.2.1/lib/action_dispatch/http/parameters.rb:92:in `set_binary_encoding'
+vendor/bundle/gems/actionpack-5.2.1/lib/action_dispatch/http/parameters.rb:69:in `path_parameters='
+vendor/bundle/gems/actionpack-5.2.1/lib/action_dispatch/journey/router.rb:50:in `block in serve'
+vendor/bundle/gems/actionpack-5.2.1/lib/action_dispatch/journey/router.rb:35:in `each'
+vendor/bundle/gems/actionpack-5.2.1/lib/action_dispatch/journey/router.rb:35:in `serve'
+vendor/bundle/gems/actionpack-5.2.1/lib/action_dispatch/routing/route_set.rb:840:in `call'
+vendor/bundle/gems/rack-2.0.5/lib/rack/tempfile_reaper.rb:15:in `call'
+vendor/bundle/gems/rack-2.0.5/lib/rack/etag.rb:25:in `call'
+vendor/bundle/gems/rack-2.0.5/lib/rack/conditional_get.rb:25:in `call'
+vendor/bundle/gems/rack-2.0.5/lib/rack/head.rb:12:in `call'
+vendor/bundle/gems/actionpack-5.2.1/lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+vendor/bundle/gems/rack-2.0.5/lib/rack/session/abstract/id.rb:232:in `context'
+vendor/bundle/gems/rack-2.0.5/lib/rack/session/abstract/id.rb:226:in `call'
+vendor/bundle/gems/actionpack-5.2.1/lib/action_dispatch/middleware/cookies.rb:670:in `call'
+vendor/bundle/gems/activerecord-5.2.1/lib/active_record/migration.rb:559:in `call'
+vendor/bundle/gems/actionpack-5.2.1/lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+vendor/bundle/gems/activesupport-5.2.1/lib/active_support/callbacks.rb:98:in `run_callbacks'
+vendor/bundle/gems/actionpack-5.2.1/lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+vendor/bundle/gems/actionpack-5.2.1/lib/action_dispatch/middleware/executor.rb:14:in `call'
+vendor/bundle/gems/actionpack-5.2.1/lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+vendor/bundle/gems/web-console-3.7.0/lib/web_console/middleware.rb:135:in `call_app'
+vendor/bundle/gems/web-console-3.7.0/lib/web_console/middleware.rb:30:in `block in call'
+vendor/bundle/gems/web-console-3.7.0/lib/web_console/middleware.rb:20:in `catch'
+vendor/bundle/gems/web-console-3.7.0/lib/web_console/middleware.rb:20:in `call'
+vendor/bundle/gems/actionpack-5.2.1/lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+vendor/bundle/gems/railties-5.2.1/lib/rails/rack/logger.rb:38:in `call_app'
+vendor/bundle/gems/railties-5.2.1/lib/rails/rack/logger.rb:26:in `block in call'
+vendor/bundle/gems/activesupport-5.2.1/lib/active_support/tagged_logging.rb:71:in `block in tagged'
+vendor/bundle/gems/activesupport-5.2.1/lib/active_support/tagged_logging.rb:28:in `tagged'
+vendor/bundle/gems/activesupport-5.2.1/lib/active_support/tagged_logging.rb:71:in `tagged'
+vendor/bundle/gems/railties-5.2.1/lib/rails/rack/logger.rb:26:in `call'
+vendor/bundle/gems/sprockets-rails-3.2.1/lib/sprockets/rails/quiet_assets.rb:13:in `call'
+vendor/bundle/gems/actionpack-5.2.1/lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+vendor/bundle/gems/actionpack-5.2.1/lib/action_dispatch/middleware/request_id.rb:27:in `call'
+vendor/bundle/gems/rack-2.0.5/lib/rack/method_override.rb:22:in `call'
+vendor/bundle/gems/rack-2.0.5/lib/rack/runtime.rb:22:in `call'
+vendor/bundle/gems/activesupport-5.2.1/lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+vendor/bundle/gems/actionpack-5.2.1/lib/action_dispatch/middleware/executor.rb:14:in `call'
+vendor/bundle/gems/actionpack-5.2.1/lib/action_dispatch/middleware/static.rb:127:in `call'
+vendor/bundle/gems/rack-2.0.5/lib/rack/sendfile.rb:111:in `call'
+vendor/bundle/gems/railties-5.2.1/lib/rails/engine.rb:524:in `call'
+vendor/bundle/gems/puma-3.12.0/lib/puma/configuration.rb:225:in `call'
+vendor/bundle/gems/puma-3.12.0/lib/puma/server.rb:658:in `handle_request'
+vendor/bundle/gems/puma-3.12.0/lib/puma/server.rb:472:in `process_client'
+vendor/bundle/gems/puma-3.12.0/lib/puma/server.rb:332:in `block in run'
+vendor/bundle/gems/puma-3.12.0/lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/bands" for 127.0.0.1 at 2018-09-13 15:56:33 -0700
+Processing by BandsController#index as */*
+  Rendering bands/index.html.erb within layouts/application
+  Rendered bands/index.html.erb within layouts/application (0.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11
+Completed 200 OK in 32ms (Views: 30.5ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/bands" for 127.0.0.1 at 2018-09-13 15:56:38 -0700
+Processing by BandsController#index as */*
+  Rendering bands/index.html.erb within layouts/application
+  Rendered bands/index.html.erb within layouts/application (0.3ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11
+Completed 200 OK in 19ms (Views: 18.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/bands" for 127.0.0.1 at 2018-09-13 16:10:54 -0700
+Processing by BandsController#index as */*
+  Rendering bands/index.html.erb within layouts/application
+  Rendered bands/index.html.erb within layouts/application (9.1ms)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"bands"}, missing required keys: [:id]):
+    2:   <input type="submit" value="Create Band">
+    3: </form>
+    4: 
+    5: <!-- <form action="<%= band_url %>" method="post">
+    6:   <input type="submit" value="Show Band">
+    7: </form> -->
+  
+app/views/bands/index.html.erb:5:in `_app_views_bands_index_html_erb___2876175087179256350_69813654873740'
+app/controllers/bands_controller.rb:3:in `index'
+Started GET "/bands" for 127.0.0.1 at 2018-09-13 16:11:58 -0700
+Processing by BandsController#index as */*
+  Rendering bands/index.html.erb within layouts/application
+  Rendered bands/index.html.erb within layouts/application (8.7ms)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"bands"}, missing required keys: [:id]):
+    2:   <input type="submit" value="Create Band">
+    3: </form>
+    4: 
+    5: <form action="<%= band_url %>" method="post">
+    6:   <input type="submit" value="Show Band">
+    7: </form>
+  
+app/views/bands/index.html.erb:5:in `_app_views_bands_index_html_erb___2876175087179256350_69813759672940'
+app/controllers/bands_controller.rb:3:in `index'
+Started GET "/bands" for 127.0.0.1 at 2018-09-13 16:14:10 -0700
+Processing by BandsController#index as */*
+  Rendering bands/index.html.erb within layouts/application
+  Rendered bands/index.html.erb within layouts/application (0.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11
+Completed 200 OK in 19ms (Views: 17.2ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/bands" for 127.0.0.1 at 2018-09-13 16:14:47 -0700
+Processing by BandsController#index as */*
+  Rendering bands/index.html.erb within layouts/application
+  Rendered bands/index.html.erb within layouts/application (8.9ms)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"bands"}, missing required keys: [:id]):
+    2:   <input type="submit" value="Create Band">
+    3: </form>
+    4: 
+    5: <form action="<%= band_url %>" method="get">
+    6:   <input type="submit" value="Show Band">
+    7: </form>
+  
+app/views/bands/index.html.erb:5:in `_app_views_bands_index_html_erb___2876175087179256350_69813689463380'
+app/controllers/bands_controller.rb:3:in `index'
+Started GET "/bands" for 127.0.0.1 at 2018-09-13 16:16:07 -0700
+Processing by BandsController#index as */*
+  Rendering bands/index.html.erb within layouts/application
+  Rendered bands/index.html.erb within layouts/application (0.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11
+Completed 200 OK in 16ms (Views: 15.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/bands" for 127.0.0.1 at 2018-09-13 16:17:13 -0700
+  
+SyntaxError (compile error):
+  
+compile error
+vendor/bundle/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:50:in `load'
+vendor/bundle/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:50:in `load'
+vendor/bundle/gems/activesupport-5.2.1/lib/active_support/dependencies.rb:472:in `block in load_file'
+vendor/bundle/gems/activesupport-5.2.1/lib/active_support/dependencies.rb:657:in `new_constants_in'
+vendor/bundle/gems/activesupport-5.2.1/lib/active_support/dependencies.rb:471:in `load_file'
+vendor/bundle/gems/activesupport-5.2.1/lib/active_support/dependencies.rb:369:in `block in require_or_load'
+vendor/bundle/gems/activesupport-5.2.1/lib/active_support/dependencies.rb:37:in `block in load_interlock'
+vendor/bundle/gems/activesupport-5.2.1/lib/active_support/dependencies/interlock.rb:14:in `block in loading'
+vendor/bundle/gems/activesupport-5.2.1/lib/active_support/concurrency/share_lock.rb:151:in `exclusive'
+vendor/bundle/gems/activesupport-5.2.1/lib/active_support/dependencies/interlock.rb:13:in `loading'
+vendor/bundle/gems/activesupport-5.2.1/lib/active_support/dependencies.rb:37:in `load_interlock'
+vendor/bundle/gems/activesupport-5.2.1/lib/active_support/dependencies.rb:352:in `require_or_load'
+vendor/bundle/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/active_support.rb:46:in `block in require_or_load'
+vendor/bundle/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/active_support.rb:16:in `allow_bootsnap_retry'
+vendor/bundle/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/active_support.rb:45:in `require_or_load'
+vendor/bundle/gems/activesupport-5.2.1/lib/active_support/dependencies.rb:506:in `load_missing_constant'
+vendor/bundle/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/active_support.rb:58:in `block in load_missing_constant'
+vendor/bundle/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/active_support.rb:16:in `allow_bootsnap_retry'
+vendor/bundle/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/active_support.rb:57:in `load_missing_constant'
+vendor/bundle/gems/activesupport-5.2.1/lib/active_support/dependencies.rb:193:in `const_missing'
+vendor/bundle/gems/activesupport-5.2.1/lib/active_support/inflector/methods.rb:283:in `const_get'
+vendor/bundle/gems/activesupport-5.2.1/lib/active_support/inflector/methods.rb:283:in `block in constantize'
+vendor/bundle/gems/activesupport-5.2.1/lib/active_support/inflector/methods.rb:281:in `each'
+vendor/bundle/gems/activesupport-5.2.1/lib/active_support/inflector/methods.rb:281:in `inject'
+vendor/bundle/gems/activesupport-5.2.1/lib/active_support/inflector/methods.rb:281:in `constantize'
+vendor/bundle/gems/activesupport-5.2.1/lib/active_support/dependencies.rb:578:in `get'
+vendor/bundle/gems/activesupport-5.2.1/lib/active_support/dependencies.rb:609:in `constantize'
+vendor/bundle/gems/actionpack-5.2.1/lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+vendor/bundle/gems/actionpack-5.2.1/lib/action_dispatch/http/parameters.rb:101:in `binary_params_for?'
+vendor/bundle/gems/actionpack-5.2.1/lib/action_dispatch/http/parameters.rb:92:in `set_binary_encoding'
+vendor/bundle/gems/actionpack-5.2.1/lib/action_dispatch/http/parameters.rb:69:in `path_parameters='
+vendor/bundle/gems/actionpack-5.2.1/lib/action_dispatch/journey/router.rb:50:in `block in serve'
+vendor/bundle/gems/actionpack-5.2.1/lib/action_dispatch/journey/router.rb:35:in `each'
+vendor/bundle/gems/actionpack-5.2.1/lib/action_dispatch/journey/router.rb:35:in `serve'
+vendor/bundle/gems/actionpack-5.2.1/lib/action_dispatch/routing/route_set.rb:840:in `call'
+vendor/bundle/gems/rack-2.0.5/lib/rack/tempfile_reaper.rb:15:in `call'
+vendor/bundle/gems/rack-2.0.5/lib/rack/etag.rb:25:in `call'
+vendor/bundle/gems/rack-2.0.5/lib/rack/conditional_get.rb:25:in `call'
+vendor/bundle/gems/rack-2.0.5/lib/rack/head.rb:12:in `call'
+vendor/bundle/gems/actionpack-5.2.1/lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+vendor/bundle/gems/rack-2.0.5/lib/rack/session/abstract/id.rb:232:in `context'
+vendor/bundle/gems/rack-2.0.5/lib/rack/session/abstract/id.rb:226:in `call'
+vendor/bundle/gems/actionpack-5.2.1/lib/action_dispatch/middleware/cookies.rb:670:in `call'
+vendor/bundle/gems/activerecord-5.2.1/lib/active_record/migration.rb:559:in `call'
+vendor/bundle/gems/actionpack-5.2.1/lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+vendor/bundle/gems/activesupport-5.2.1/lib/active_support/callbacks.rb:98:in `run_callbacks'
+vendor/bundle/gems/actionpack-5.2.1/lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+vendor/bundle/gems/actionpack-5.2.1/lib/action_dispatch/middleware/executor.rb:14:in `call'
+vendor/bundle/gems/actionpack-5.2.1/lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+vendor/bundle/gems/web-console-3.7.0/lib/web_console/middleware.rb:135:in `call_app'
+vendor/bundle/gems/web-console-3.7.0/lib/web_console/middleware.rb:30:in `block in call'
+vendor/bundle/gems/web-console-3.7.0/lib/web_console/middleware.rb:20:in `catch'
+vendor/bundle/gems/web-console-3.7.0/lib/web_console/middleware.rb:20:in `call'
+vendor/bundle/gems/actionpack-5.2.1/lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+vendor/bundle/gems/railties-5.2.1/lib/rails/rack/logger.rb:38:in `call_app'
+vendor/bundle/gems/railties-5.2.1/lib/rails/rack/logger.rb:26:in `block in call'
+vendor/bundle/gems/activesupport-5.2.1/lib/active_support/tagged_logging.rb:71:in `block in tagged'
+vendor/bundle/gems/activesupport-5.2.1/lib/active_support/tagged_logging.rb:28:in `tagged'
+vendor/bundle/gems/activesupport-5.2.1/lib/active_support/tagged_logging.rb:71:in `tagged'
+vendor/bundle/gems/railties-5.2.1/lib/rails/rack/logger.rb:26:in `call'
+vendor/bundle/gems/sprockets-rails-3.2.1/lib/sprockets/rails/quiet_assets.rb:13:in `call'
+vendor/bundle/gems/actionpack-5.2.1/lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+vendor/bundle/gems/actionpack-5.2.1/lib/action_dispatch/middleware/request_id.rb:27:in `call'
+vendor/bundle/gems/rack-2.0.5/lib/rack/method_override.rb:22:in `call'
+vendor/bundle/gems/rack-2.0.5/lib/rack/runtime.rb:22:in `call'
+vendor/bundle/gems/activesupport-5.2.1/lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+vendor/bundle/gems/actionpack-5.2.1/lib/action_dispatch/middleware/executor.rb:14:in `call'
+vendor/bundle/gems/actionpack-5.2.1/lib/action_dispatch/middleware/static.rb:127:in `call'
+vendor/bundle/gems/rack-2.0.5/lib/rack/sendfile.rb:111:in `call'
+vendor/bundle/gems/railties-5.2.1/lib/rails/engine.rb:524:in `call'
+vendor/bundle/gems/puma-3.12.0/lib/puma/configuration.rb:225:in `call'
+vendor/bundle/gems/puma-3.12.0/lib/puma/server.rb:658:in `handle_request'
+vendor/bundle/gems/puma-3.12.0/lib/puma/server.rb:472:in `process_client'
+vendor/bundle/gems/puma-3.12.0/lib/puma/server.rb:332:in `block in run'
+vendor/bundle/gems/puma-3.12.0/lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/bands" for 127.0.0.1 at 2018-09-13 16:17:40 -0700
+  
+SyntaxError (compile error):
+  
+compile error
+vendor/bundle/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:50:in `load'
+vendor/bundle/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:50:in `load'
+vendor/bundle/gems/activesupport-5.2.1/lib/active_support/dependencies.rb:472:in `block in load_file'
+vendor/bundle/gems/activesupport-5.2.1/lib/active_support/dependencies.rb:657:in `new_constants_in'
+vendor/bundle/gems/activesupport-5.2.1/lib/active_support/dependencies.rb:471:in `load_file'
+vendor/bundle/gems/activesupport-5.2.1/lib/active_support/dependencies.rb:369:in `block in require_or_load'
+vendor/bundle/gems/activesupport-5.2.1/lib/active_support/dependencies.rb:37:in `block in load_interlock'
+vendor/bundle/gems/activesupport-5.2.1/lib/active_support/dependencies/interlock.rb:14:in `block in loading'
+vendor/bundle/gems/activesupport-5.2.1/lib/active_support/concurrency/share_lock.rb:151:in `exclusive'
+vendor/bundle/gems/activesupport-5.2.1/lib/active_support/dependencies/interlock.rb:13:in `loading'
+vendor/bundle/gems/activesupport-5.2.1/lib/active_support/dependencies.rb:37:in `load_interlock'
+vendor/bundle/gems/activesupport-5.2.1/lib/active_support/dependencies.rb:352:in `require_or_load'
+vendor/bundle/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/active_support.rb:46:in `block in require_or_load'
+vendor/bundle/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/active_support.rb:16:in `allow_bootsnap_retry'
+vendor/bundle/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/active_support.rb:45:in `require_or_load'
+vendor/bundle/gems/activesupport-5.2.1/lib/active_support/dependencies.rb:506:in `load_missing_constant'
+vendor/bundle/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/active_support.rb:58:in `block in load_missing_constant'
+vendor/bundle/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/active_support.rb:16:in `allow_bootsnap_retry'
+vendor/bundle/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/active_support.rb:57:in `load_missing_constant'
+vendor/bundle/gems/activesupport-5.2.1/lib/active_support/dependencies.rb:193:in `const_missing'
+vendor/bundle/gems/activesupport-5.2.1/lib/active_support/inflector/methods.rb:283:in `const_get'
+vendor/bundle/gems/activesupport-5.2.1/lib/active_support/inflector/methods.rb:283:in `block in constantize'
+vendor/bundle/gems/activesupport-5.2.1/lib/active_support/inflector/methods.rb:281:in `each'
+vendor/bundle/gems/activesupport-5.2.1/lib/active_support/inflector/methods.rb:281:in `inject'
+vendor/bundle/gems/activesupport-5.2.1/lib/active_support/inflector/methods.rb:281:in `constantize'
+vendor/bundle/gems/activesupport-5.2.1/lib/active_support/dependencies.rb:578:in `get'
+vendor/bundle/gems/activesupport-5.2.1/lib/active_support/dependencies.rb:609:in `constantize'
+vendor/bundle/gems/actionpack-5.2.1/lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+vendor/bundle/gems/actionpack-5.2.1/lib/action_dispatch/http/parameters.rb:101:in `binary_params_for?'
+vendor/bundle/gems/actionpack-5.2.1/lib/action_dispatch/http/parameters.rb:92:in `set_binary_encoding'
+vendor/bundle/gems/actionpack-5.2.1/lib/action_dispatch/http/parameters.rb:69:in `path_parameters='
+vendor/bundle/gems/actionpack-5.2.1/lib/action_dispatch/journey/router.rb:50:in `block in serve'
+vendor/bundle/gems/actionpack-5.2.1/lib/action_dispatch/journey/router.rb:35:in `each'
+vendor/bundle/gems/actionpack-5.2.1/lib/action_dispatch/journey/router.rb:35:in `serve'
+vendor/bundle/gems/actionpack-5.2.1/lib/action_dispatch/routing/route_set.rb:840:in `call'
+vendor/bundle/gems/rack-2.0.5/lib/rack/tempfile_reaper.rb:15:in `call'
+vendor/bundle/gems/rack-2.0.5/lib/rack/etag.rb:25:in `call'
+vendor/bundle/gems/rack-2.0.5/lib/rack/conditional_get.rb:25:in `call'
+vendor/bundle/gems/rack-2.0.5/lib/rack/head.rb:12:in `call'
+vendor/bundle/gems/actionpack-5.2.1/lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+vendor/bundle/gems/rack-2.0.5/lib/rack/session/abstract/id.rb:232:in `context'
+vendor/bundle/gems/rack-2.0.5/lib/rack/session/abstract/id.rb:226:in `call'
+vendor/bundle/gems/actionpack-5.2.1/lib/action_dispatch/middleware/cookies.rb:670:in `call'
+vendor/bundle/gems/activerecord-5.2.1/lib/active_record/migration.rb:559:in `call'
+vendor/bundle/gems/actionpack-5.2.1/lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+vendor/bundle/gems/activesupport-5.2.1/lib/active_support/callbacks.rb:98:in `run_callbacks'
+vendor/bundle/gems/actionpack-5.2.1/lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+vendor/bundle/gems/actionpack-5.2.1/lib/action_dispatch/middleware/executor.rb:14:in `call'
+vendor/bundle/gems/actionpack-5.2.1/lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+vendor/bundle/gems/web-console-3.7.0/lib/web_console/middleware.rb:135:in `call_app'
+vendor/bundle/gems/web-console-3.7.0/lib/web_console/middleware.rb:30:in `block in call'
+vendor/bundle/gems/web-console-3.7.0/lib/web_console/middleware.rb:20:in `catch'
+vendor/bundle/gems/web-console-3.7.0/lib/web_console/middleware.rb:20:in `call'
+vendor/bundle/gems/actionpack-5.2.1/lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+vendor/bundle/gems/railties-5.2.1/lib/rails/rack/logger.rb:38:in `call_app'
+vendor/bundle/gems/railties-5.2.1/lib/rails/rack/logger.rb:26:in `block in call'
+vendor/bundle/gems/activesupport-5.2.1/lib/active_support/tagged_logging.rb:71:in `block in tagged'
+vendor/bundle/gems/activesupport-5.2.1/lib/active_support/tagged_logging.rb:28:in `tagged'
+vendor/bundle/gems/activesupport-5.2.1/lib/active_support/tagged_logging.rb:71:in `tagged'
+vendor/bundle/gems/railties-5.2.1/lib/rails/rack/logger.rb:26:in `call'
+vendor/bundle/gems/sprockets-rails-3.2.1/lib/sprockets/rails/quiet_assets.rb:13:in `call'
+vendor/bundle/gems/actionpack-5.2.1/lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+vendor/bundle/gems/actionpack-5.2.1/lib/action_dispatch/middleware/request_id.rb:27:in `call'
+vendor/bundle/gems/rack-2.0.5/lib/rack/method_override.rb:22:in `call'
+vendor/bundle/gems/rack-2.0.5/lib/rack/runtime.rb:22:in `call'
+vendor/bundle/gems/activesupport-5.2.1/lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+vendor/bundle/gems/actionpack-5.2.1/lib/action_dispatch/middleware/executor.rb:14:in `call'
+vendor/bundle/gems/actionpack-5.2.1/lib/action_dispatch/middleware/static.rb:127:in `call'
+vendor/bundle/gems/rack-2.0.5/lib/rack/sendfile.rb:111:in `call'
+vendor/bundle/gems/railties-5.2.1/lib/rails/engine.rb:524:in `call'
+vendor/bundle/gems/puma-3.12.0/lib/puma/configuration.rb:225:in `call'
+vendor/bundle/gems/puma-3.12.0/lib/puma/server.rb:658:in `handle_request'
+vendor/bundle/gems/puma-3.12.0/lib/puma/server.rb:472:in `process_client'
+vendor/bundle/gems/puma-3.12.0/lib/puma/server.rb:332:in `block in run'
+vendor/bundle/gems/puma-3.12.0/lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/bands" for 127.0.0.1 at 2018-09-13 16:18:13 -0700
+Processing by BandsController#index as */*
+  Rendering bands/index.html.erb within layouts/application
+  Rendered bands/index.html.erb within layouts/application (0.3ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11
+Completed 200 OK in 18ms (Views: 16.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/bands" for 127.0.0.1 at 2018-09-13 16:19:17 -0700
+Processing by BandsController#index as */*
+  Rendering bands/index.html.erb within layouts/application
+  Rendered bands/index.html.erb within layouts/application (0.3ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11
+Completed 200 OK in 18ms (Views: 16.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/bands" for 127.0.0.1 at 2018-09-13 16:19:43 -0700
+Processing by BandsController#index as */*
+  Rendering bands/index.html.erb within layouts/application
+  Rendered bands/index.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11
+Completed 200 OK in 17ms (Views: 16.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/bands" for 127.0.0.1 at 2018-09-13 16:19:49 -0700
+Processing by BandsController#index as */*
+  Rendering bands/index.html.erb within layouts/application
+  Rendered bands/index.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11
+Completed 200 OK in 17ms (Views: 16.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/bands" for 127.0.0.1 at 2018-09-13 16:21:21 -0700
+Processing by BandsController#index as */*
+  Rendering bands/index.html.erb within layouts/application
+  Rendered bands/index.html.erb within layouts/application (0.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11
+Completed 200 OK in 16ms (Views: 15.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/bands" for 127.0.0.1 at 2018-09-13 16:21:33 -0700
+Processing by BandsController#index as */*
+  Rendering bands/index.html.erb within layouts/application
+  Rendered bands/index.html.erb within layouts/application (0.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11
+Completed 200 OK in 16ms (Views: 15.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/bands" for 127.0.0.1 at 2018-09-13 16:21:55 -0700
+Processing by BandsController#index as */*
+  Rendering bands/index.html.erb within layouts/application
+  Rendered bands/index.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11
+Completed 200 OK in 18ms (Views: 17.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/bands/new" for 127.0.0.1 at 2018-09-13 16:21:56 -0700
+Processing by BandsController#new as HTML
+  Rendering bands/new.html.erb within layouts/application
+  Rendered bands/new.html.erb within layouts/application (6.4ms)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `errors' for nil:NilClass):
+    1: <% flash[:errors].errors.full_messages  %>
+    2: 
+    3: <form action="<%= bands_url %>" method="post">
+    4:   <input type="text" name="band[name]">
+  
+app/views/bands/new.html.erb:1:in `_app_views_bands_new_html_erb___176782652096399640_69813624857840'
+app/controllers/bands_controller.rb:17:in `new'
+Started GET "/bands" for 127.0.0.1 at 2018-09-13 16:23:38 -0700
+Processing by BandsController#index as */*
+  Rendering bands/index.html.erb within layouts/application
+  Rendered bands/index.html.erb within layouts/application (0.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11
+Completed 200 OK in 17ms (Views: 16.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/bands/new" for 127.0.0.1 at 2018-09-13 16:23:40 -0700
+Processing by BandsController#new as HTML
+  Rendering bands/new.html.erb within layouts/application
+  Rendered bands/new.html.erb within layouts/application (6.5ms)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `errors' for nil:NilClass):
+    1: <% if !flash[:errors].errors.full_messages.is_empty?  %>
+    2:   <% flash[:errors].errors.full_messages.each do |msg| %>
+    3:     <%= msg %>
+    4:   <% end %>
+  
+app/views/bands/new.html.erb:1:in `_app_views_bands_new_html_erb___176782652096399640_69813688134400'
+app/controllers/bands_controller.rb:17:in `new'
+Started GET "/bands" for 127.0.0.1 at 2018-09-13 16:24:41 -0700
+Processing by BandsController#index as */*
+  Rendering bands/index.html.erb within layouts/application
+  Rendered bands/index.html.erb within layouts/application (0.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11
+Completed 200 OK in 17ms (Views: 17.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/bands/new" for 127.0.0.1 at 2018-09-13 16:24:43 -0700
+Processing by BandsController#new as HTML
+  Rendering bands/new.html.erb within layouts/application
+  Rendered bands/new.html.erb within layouts/application (6.4ms)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `errors' for nil:NilClass):
+    1: <% if !flash[:errors].errors.full_messages.empty?  %>
+    2:   <% flash[:errors].errors.full_messages.each do |msg| %>
+    3:     <%= msg %>
+    4:   <% end %>
+  
+app/views/bands/new.html.erb:1:in `_app_views_bands_new_html_erb___176782652096399640_69813798074880'
+app/controllers/bands_controller.rb:17:in `new'
+Started GET "/bands" for 127.0.0.1 at 2018-09-13 16:25:32 -0700
+Processing by BandsController#index as */*
+  Rendering bands/index.html.erb within layouts/application
+  Rendered bands/index.html.erb within layouts/application (0.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11
+Completed 200 OK in 17ms (Views: 16.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/bands/new" for 127.0.0.1 at 2018-09-13 16:25:33 -0700
+Processing by BandsController#new as HTML
+  Rendering bands/new.html.erb within layouts/application
+  Rendered bands/new.html.erb within layouts/application (1.0ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11
+Completed 200 OK in 33ms (Views: 31.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/bands" for 127.0.0.1 at 2018-09-13 16:25:42 -0700
+Processing by BandsController#index as */*
+  Rendering bands/index.html.erb within layouts/application
+  Rendered bands/index.html.erb within layouts/application (0.5ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11
+Completed 200 OK in 17ms (Views: 16.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/bands/new" for 127.0.0.1 at 2018-09-13 16:25:43 -0700
+Processing by BandsController#new as HTML
+  Rendering bands/new.html.erb within layouts/application
+  Rendered bands/new.html.erb within layouts/application (1.0ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11
+Completed 200 OK in 32ms (Views: 31.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/bands" for 127.0.0.1 at 2018-09-13 16:28:39 -0700
+Processing by BandsController#index as */*
+  Rendering bands/index.html.erb within layouts/application
+  Rendered bands/index.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11
+Completed 200 OK in 16ms (Views: 15.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/bands/new" for 127.0.0.1 at 2018-09-13 16:28:41 -0700
+Processing by BandsController#new as HTML
+  Rendering bands/new.html.erb within layouts/application
+  Rendered bands/new.html.erb within layouts/application (0.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11
+Completed 200 OK in 10ms (Views: 8.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/bands/new" for 127.0.0.1 at 2018-09-13 16:29:46 -0700
+Processing by BandsController#new as */*
+  Rendering bands/new.html.erb within layouts/application
+  Rendered bands/new.html.erb within layouts/application (0.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11
+Completed 200 OK in 17ms (Views: 16.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/bands/1/edit" for 127.0.0.1 at 2018-09-13 16:46:18 -0700
+Processing by BandsController#edit as */*
+  Parameters: {"id"=>"1"}
+  Rendering bands/edit.html.erb within layouts/application
+  Rendered bands/edit.html.erb within layouts/application (123.4ms)
+Completed 500 Internal Server Error in 133ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `id' for #<#<Class:0x007efd808f0b68>:0x007efd808eeed0>):
+    1: <form action="<%= band_url %>" method="post">
+    2:   <input type="hidden" name="_method" value="patch">
+    3:   <input type="text" name="band[name]" value="<%= Band.find_by(id: id).name %>">
+    4:   <input type="submit" value="Edit Band">
+    5: </form>
+  
+app/views/bands/edit.html.erb:3:in `_app_views_bands_edit_html_erb__4158951590945355155_69813624333980'
+app/controllers/bands_controller.rb:21:in `edit'
+Started GET "/bands/1/edit" for 127.0.0.1 at 2018-09-13 16:47:26 -0700
+Processing by BandsController#edit as */*
+  Parameters: {"id"=>"1"}
+  Rendering bands/edit.html.erb within layouts/application
+  [1m[36mBand Load (0.5ms)[0m  [1m[34mSELECT  "bands".* FROM "bands" WHERE (1) LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/bands/edit.html.erb:3
+  Rendered bands/edit.html.erb within layouts/application (10.7ms)
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (PG::DatatypeMismatch: ERROR:  argument of WHERE must be type boolean, not type integer
+LINE 1: SELECT  "bands".* FROM "bands" WHERE (1) LIMIT $1
+                                              ^
+: SELECT  "bands".* FROM "bands" WHERE (1) LIMIT $1):
+    1: <form action="<%= band_url %>" method="post">
+    2:   <input type="hidden" name="_method" value="patch">
+    3:   <input type="text" name="band[name]" value="<%= Band.find_by(params[:id]).name %>">
+    4:   <input type="submit" value="Edit Band">
+    5: </form>
+  
+app/views/bands/edit.html.erb:3:in `_app_views_bands_edit_html_erb__4158951590945355155_69813655848480'
+app/controllers/bands_controller.rb:21:in `edit'
+Started GET "/" for 127.0.0.1 at 2018-09-13 16:48:08 -0700
+Processing by Rails::WelcomeController#index as HTML
+  Rendering vendor/bundle/gems/railties-5.2.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered vendor/bundle/gems/railties-5.2.1/lib/rails/templates/rails/welcome/index.html.erb (2.2ms)
+Completed 200 OK in 6ms (Views: 3.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/bands" for 127.0.0.1 at 2018-09-13 16:48:13 -0700
+Processing by BandsController#index as HTML
+  Rendering bands/index.html.erb within layouts/application
+  Rendered bands/index.html.erb within layouts/application (2.9ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"edit", :controller=>"bands"}, missing required keys: [:id]):
+    1: <br>
+    2: <a href="<%= new_band_url %>">Create Band</a>
+    3: <a href="<%= edit_band_url %>">Edit Band</a>
+  
+app/views/bands/index.html.erb:3:in `_app_views_bands_index_html_erb___2876175087179256350_69813809330280'
+app/controllers/bands_controller.rb:3:in `index'
+Started GET "/bands" for 127.0.0.1 at 2018-09-13 16:48:56 -0700
+Processing by BandsController#index as HTML
+  Rendering bands/index.html.erb within layouts/application
+  Rendered bands/index.html.erb within layouts/application (0.6ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11
+Completed 200 OK in 35ms (Views: 32.2ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/bands/new" for 127.0.0.1 at 2018-09-13 16:48:58 -0700
+Processing by BandsController#new as HTML
+  Rendering bands/new.html.erb within layouts/application
+  Rendered bands/new.html.erb within layouts/application (0.6ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11
+Completed 200 OK in 16ms (Views: 15.0ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/bands" for 127.0.0.1 at 2018-09-13 16:49:02 -0700
+Processing by BandsController#create as HTML
+  Parameters: {"band"=>{"name"=>"Grendel"}}
+Can't verify CSRF token authenticity.
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/bands_controller.rb:12
+  [1m[36mBand Create (1.0ms)[0m  [1m[32mINSERT INTO "bands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Grendel"], ["created_at", "2018-09-13 23:49:02.372193"], ["updated_at", "2018-09-13 23:49:02.372193"]]
+  ↳ app/controllers/bands_controller.rb:12
+  [1m[35m (3.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/bands_controller.rb:12
+Redirected to http://localhost:3000/bands/1
+Completed 302 Found in 24ms (ActiveRecord: 11.1ms)
+
+
+Started GET "/bands/1" for 127.0.0.1 at 2018-09-13 16:49:02 -0700
+Processing by BandsController#show as HTML
+  Parameters: {"id"=>"1"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/bands_controller.rb:34:in `show'
+Started POST "/bands" for 127.0.0.1 at 2018-09-13 16:50:04 -0700
+Processing by BandsController#create as HTML
+  Parameters: {"band"=>{"name"=>"Grendel"}}
+Can't verify CSRF token authenticity.
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/bands_controller.rb:12
+  [1m[36mBand Create (0.5ms)[0m  [1m[32mINSERT INTO "bands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Grendel"], ["created_at", "2018-09-13 23:50:04.850835"], ["updated_at", "2018-09-13 23:50:04.850835"]]
+  ↳ app/controllers/bands_controller.rb:12
+  [1m[35m (6.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/bands_controller.rb:12
+Redirected to http://localhost:3000/bands/2
+Completed 302 Found in 14ms (ActiveRecord: 7.5ms)
+
+
+Started GET "/bands/2" for 127.0.0.1 at 2018-09-13 16:50:04 -0700
+Processing by BandsController#show as HTML
+  Parameters: {"id"=>"2"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/bands_controller.rb:34:in `show'
+Started GET "/bands/" for 127.0.0.1 at 2018-09-13 16:50:22 -0700
+Processing by BandsController#index as HTML
+  Rendering bands/index.html.erb within layouts/application
+  Rendered bands/index.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11
+Completed 200 OK in 11ms (Views: 10.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/bands/new" for 127.0.0.1 at 2018-09-13 16:50:23 -0700
+Processing by BandsController#new as HTML
+  Rendering bands/new.html.erb within layouts/application
+  Rendered bands/new.html.erb within layouts/application (0.5ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11
+Completed 200 OK in 15ms (Views: 13.9ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/bands" for 127.0.0.1 at 2018-09-13 16:50:26 -0700
+Processing by BandsController#create as HTML
+  Parameters: {"band"=>{"name"=>"Grendel"}}
+Can't verify CSRF token authenticity.
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/bands_controller.rb:12
+  [1m[36mBand Create (0.5ms)[0m  [1m[32mINSERT INTO "bands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Grendel"], ["created_at", "2018-09-13 23:50:26.787162"], ["updated_at", "2018-09-13 23:50:26.787162"]]
+  ↳ app/controllers/bands_controller.rb:12
+  [1m[35m (4.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/bands_controller.rb:12
+Redirected to http://localhost:3000/bands/3
+Completed 302 Found in 11ms (ActiveRecord: 5.6ms)
+
+
+Started GET "/bands/3" for 127.0.0.1 at 2018-09-13 16:50:26 -0700
+Processing by BandsController#show as HTML
+  Parameters: {"id"=>"3"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/bands_controller.rb:34:in `show'
+Started POST "/bands" for 127.0.0.1 at 2018-09-13 16:51:30 -0700
+Processing by BandsController#create as HTML
+  Parameters: {"band"=>{"name"=>"Grendel"}}
+Can't verify CSRF token authenticity.
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/bands_controller.rb:12
+  [1m[36mBand Create (0.2ms)[0m  [1m[32mINSERT INTO "bands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Grendel"], ["created_at", "2018-09-13 23:51:30.259163"], ["updated_at", "2018-09-13 23:51:30.259163"]]
+  ↳ app/controllers/bands_controller.rb:12
+  [1m[35m (3.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/bands_controller.rb:12
+Redirected to http://localhost:3000/bands/4
+Completed 302 Found in 12ms (ActiveRecord: 6.0ms)
+
+
+Started GET "/bands/4" for 127.0.0.1 at 2018-09-13 16:51:30 -0700
+Processing by BandsController#show as HTML
+  Parameters: {"id"=>"4"}
+  Rendering bands/show.html.erb within layouts/application
+  Rendered bands/show.html.erb within layouts/application (1.5ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    1: <%= @band.name %>
+    2: 
+    3: <form action="<%= edit_band_url(@band) %>" method="post">
+    4:   <input type="submit" value="Edit Band">
+  
+app/views/bands/show.html.erb:1:in `_app_views_bands_show_html_erb__1856614923545852008_69813620481220'
+app/controllers/bands_controller.rb:34:in `show'
+Started GET "/bands/4" for 127.0.0.1 at 2018-09-13 16:55:32 -0700
+Processing by BandsController#show as HTML
+  Parameters: {"id"=>"4"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/bands_controller.rb:34:in `show'
+Started POST "/bands" for 127.0.0.1 at 2018-09-13 16:55:36 -0700
+Processing by BandsController#create as HTML
+  Parameters: {"band"=>{"name"=>"Grendel"}}
+Can't verify CSRF token authenticity.
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/bands_controller.rb:12
+  [1m[36mBand Create (0.5ms)[0m  [1m[32mINSERT INTO "bands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Grendel"], ["created_at", "2018-09-13 23:55:36.605264"], ["updated_at", "2018-09-13 23:55:36.605264"]]
+  ↳ app/controllers/bands_controller.rb:12
+  [1m[35m (4.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/bands_controller.rb:12
+Redirected to http://localhost:3000/bands/5
+Completed 302 Found in 27ms (ActiveRecord: 11.0ms)
+
+
+Started GET "/bands/5" for 127.0.0.1 at 2018-09-13 16:55:36 -0700
+Processing by BandsController#show as HTML
+  Parameters: {"id"=>"5"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/bands_controller.rb:34:in `show'
+Started GET "/bands/1/" for 127.0.0.1 at 2018-09-13 16:56:52 -0700
+Processing by BandsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mBand Load (0.5ms)[0m  [1m[34mSELECT  "bands".* FROM "bands" WHERE (1) LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/bands_controller.rb:34
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.5ms)
+
+
+  
+ActiveRecord::StatementInvalid (PG::DatatypeMismatch: ERROR:  argument of WHERE must be type boolean, not type integer
+LINE 1: SELECT  "bands".* FROM "bands" WHERE (1) LIMIT $1
+                                              ^
+: SELECT  "bands".* FROM "bands" WHERE (1) LIMIT $1):
+  
+app/controllers/bands_controller.rb:34:in `show'
+  [1m[36mBand Load (0.3ms)[0m  [1m[34mSELECT  "bands".* FROM "bands" LIMIT $1[0m  [["LIMIT", 11]]
+Started GET "/" for 127.0.0.1 at 2018-09-13 17:02:08 -0700
+Processing by Rails::WelcomeController#index as HTML
+  Rendering vendor/bundle/gems/railties-5.2.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered vendor/bundle/gems/railties-5.2.1/lib/rails/templates/rails/welcome/index.html.erb (1.7ms)
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/bands/1" for 127.0.0.1 at 2018-09-13 17:02:13 -0700
+Processing by BandsController#show as HTML
+  Parameters: {"id"=>"1"}
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `show'
+app/controllers/bands_controller.rb:35:in `show'
+Started POST "/__web_console/repl_sessions/5f27c786f8447a2eb4cac7de9974bf91/trace" for 127.0.0.1 at 2018-09-13 17:02:23 -0700
+Started POST "/__web_console/repl_sessions/5f27c786f8447a2eb4cac7de9974bf91/trace" for 127.0.0.1 at 2018-09-13 17:02:28 -0700
+Started PUT "/__web_console/repl_sessions/5f27c786f8447a2eb4cac7de9974bf91" for 127.0.0.1 at 2018-09-13 17:02:43 -0700
+Started PUT "/__web_console/repl_sessions/5f27c786f8447a2eb4cac7de9974bf91" for 127.0.0.1 at 2018-09-13 17:02:43 -0700
+Started PUT "/__web_console/repl_sessions/5f27c786f8447a2eb4cac7de9974bf91" for 127.0.0.1 at 2018-09-13 17:02:50 -0700
+Started PUT "/__web_console/repl_sessions/5f27c786f8447a2eb4cac7de9974bf91" for 127.0.0.1 at 2018-09-13 17:02:56 -0700
+Started PUT "/__web_console/repl_sessions/5f27c786f8447a2eb4cac7de9974bf91" for 127.0.0.1 at 2018-09-13 17:02:57 -0700
+  [1m[36mBand Load (8.9ms)[0m  [1m[34mSELECT  "bands".* FROM "bands" WHERE (1) LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ vendor/bundle/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Started PUT "/__web_console/repl_sessions/5f27c786f8447a2eb4cac7de9974bf91" for 127.0.0.1 at 2018-09-13 17:03:14 -0700
+Started PUT "/__web_console/repl_sessions/5f27c786f8447a2eb4cac7de9974bf91" for 127.0.0.1 at 2018-09-13 17:03:15 -0700
+  [1m[36mBand Load (1.0ms)[0m  [1m[34mSELECT  "bands".* FROM "bands" WHERE "bands"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ vendor/bundle/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Started GET "/bands/1/" for 127.0.0.1 at 2018-09-13 17:03:22 -0700
+Processing by BandsController#show as */*
+  Parameters: {"id"=>"1"}
+Started GET "/bands/1/" for 127.0.0.1 at 2018-09-13 17:04:34 -0700
+Started GET "/bands/2" for 127.0.0.1 at 2018-09-13 17:04:34 -0700
+  [1m[36mBand Load (0.7ms)[0m  [1m[34mSELECT  "bands".* FROM "bands" WHERE "bands"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/bands_controller.rb:35
+  Rendering bands/show.html.erb within layouts/application
+  Rendered bands/show.html.erb within layouts/application (1.3ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11
+Completed 200 OK in 71389ms (Views: 74.8ms | ActiveRecord: 17.3ms)
+
+
+Processing by BandsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mBand Load (0.1ms)[0m  [1m[34mSELECT  "bands".* FROM "bands" WHERE "bands"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/bands_controller.rb:34
+Processing by BandsController#show as HTML
+  Parameters: {"id"=>"2"}
+  Rendering bands/show.html.erb within layouts/application
+  Rendered bands/show.html.erb within layouts/application (0.2ms)
+  [1m[36mBand Load (0.5ms)[0m  [1m[34mSELECT  "bands".* FROM "bands" WHERE "bands"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/bands_controller.rb:34
+  Rendering bands/show.html.erb within layouts/application
+  Rendered bands/show.html.erb within layouts/application (0.5ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11
+  ↳ app/controllers/application_controller.rb:11
+Completed 200 OK in 36ms (Views: 27.6ms | ActiveRecord: 3.7ms)
+
+
+Completed 200 OK in 18ms (Views: 14.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/bands/" for 127.0.0.1 at 2018-09-13 17:04:40 -0700
+Processing by BandsController#index as HTML
+  Rendering bands/index.html.erb within layouts/application
+  Rendered bands/index.html.erb within layouts/application (0.8ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11
+Completed 200 OK in 19ms (Views: 17.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/bands/1/" for 127.0.0.1 at 2018-09-13 17:04:46 -0700
+Processing by BandsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mBand Load (0.2ms)[0m  [1m[34mSELECT  "bands".* FROM "bands" WHERE "bands"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/bands_controller.rb:34
+  Rendering bands/show.html.erb within layouts/application
+  Rendered bands/show.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11
+Completed 200 OK in 19ms (Views: 17.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/bands/1" for 127.0.0.1 at 2018-09-13 17:05:21 -0700
+Processing by BandsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBand Load (0.2ms)[0m  [1m[34mSELECT  "bands".* FROM "bands" WHERE "bands"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/bands_controller.rb:34
+  Rendering bands/show.html.erb within layouts/application
+  Rendered bands/show.html.erb within layouts/application (0.5ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11
+Completed 200 OK in 11ms (Views: 9.4ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/bands/1/edit" for 127.0.0.1 at 2018-09-13 17:05:23 -0700
+  
+ActionController::RoutingError (No route matches [POST] "/bands/1/edit"):
+  
+vendor/bundle/gems/actionpack-5.2.1/lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+vendor/bundle/gems/web-console-3.7.0/lib/web_console/middleware.rb:135:in `call_app'
+vendor/bundle/gems/web-console-3.7.0/lib/web_console/middleware.rb:30:in `block in call'
+vendor/bundle/gems/web-console-3.7.0/lib/web_console/middleware.rb:20:in `catch'
+vendor/bundle/gems/web-console-3.7.0/lib/web_console/middleware.rb:20:in `call'
+vendor/bundle/gems/actionpack-5.2.1/lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+vendor/bundle/gems/railties-5.2.1/lib/rails/rack/logger.rb:38:in `call_app'
+vendor/bundle/gems/railties-5.2.1/lib/rails/rack/logger.rb:26:in `block in call'
+vendor/bundle/gems/activesupport-5.2.1/lib/active_support/tagged_logging.rb:71:in `block in tagged'
+vendor/bundle/gems/activesupport-5.2.1/lib/active_support/tagged_logging.rb:28:in `tagged'
+vendor/bundle/gems/activesupport-5.2.1/lib/active_support/tagged_logging.rb:71:in `tagged'
+vendor/bundle/gems/railties-5.2.1/lib/rails/rack/logger.rb:26:in `call'
+vendor/bundle/gems/sprockets-rails-3.2.1/lib/sprockets/rails/quiet_assets.rb:13:in `call'
+vendor/bundle/gems/actionpack-5.2.1/lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+vendor/bundle/gems/actionpack-5.2.1/lib/action_dispatch/middleware/request_id.rb:27:in `call'
+vendor/bundle/gems/rack-2.0.5/lib/rack/method_override.rb:22:in `call'
+vendor/bundle/gems/rack-2.0.5/lib/rack/runtime.rb:22:in `call'
+vendor/bundle/gems/activesupport-5.2.1/lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+vendor/bundle/gems/actionpack-5.2.1/lib/action_dispatch/middleware/executor.rb:14:in `call'
+vendor/bundle/gems/actionpack-5.2.1/lib/action_dispatch/middleware/static.rb:127:in `call'
+vendor/bundle/gems/rack-2.0.5/lib/rack/sendfile.rb:111:in `call'
+vendor/bundle/gems/railties-5.2.1/lib/rails/engine.rb:524:in `call'
+vendor/bundle/gems/puma-3.12.0/lib/puma/configuration.rb:225:in `call'
+vendor/bundle/gems/puma-3.12.0/lib/puma/server.rb:658:in `handle_request'
+vendor/bundle/gems/puma-3.12.0/lib/puma/server.rb:472:in `process_client'
+vendor/bundle/gems/puma-3.12.0/lib/puma/server.rb:332:in `block in run'
+vendor/bundle/gems/puma-3.12.0/lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/bands/1/" for 127.0.0.1 at 2018-09-13 17:06:21 -0700
+Processing by BandsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBand Load (0.2ms)[0m  [1m[34mSELECT  "bands".* FROM "bands" WHERE "bands"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/bands_controller.rb:35
+  Rendering bands/show.html.erb within layouts/application
+  Rendered bands/show.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11
+Completed 200 OK in 28ms (Views: 10.0ms | ActiveRecord: 5.0ms)
+
+
+Started POST "/bands/1/edit" for 127.0.0.1 at 2018-09-13 17:06:23 -0700
+  
+ActionController::RoutingError (No route matches [POST] "/bands/1/edit"):
+  
+vendor/bundle/gems/actionpack-5.2.1/lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+vendor/bundle/gems/web-console-3.7.0/lib/web_console/middleware.rb:135:in `call_app'
+vendor/bundle/gems/web-console-3.7.0/lib/web_console/middleware.rb:30:in `block in call'
+vendor/bundle/gems/web-console-3.7.0/lib/web_console/middleware.rb:20:in `catch'
+vendor/bundle/gems/web-console-3.7.0/lib/web_console/middleware.rb:20:in `call'
+vendor/bundle/gems/actionpack-5.2.1/lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+vendor/bundle/gems/railties-5.2.1/lib/rails/rack/logger.rb:38:in `call_app'
+vendor/bundle/gems/railties-5.2.1/lib/rails/rack/logger.rb:26:in `block in call'
+vendor/bundle/gems/activesupport-5.2.1/lib/active_support/tagged_logging.rb:71:in `block in tagged'
+vendor/bundle/gems/activesupport-5.2.1/lib/active_support/tagged_logging.rb:28:in `tagged'
+vendor/bundle/gems/activesupport-5.2.1/lib/active_support/tagged_logging.rb:71:in `tagged'
+vendor/bundle/gems/railties-5.2.1/lib/rails/rack/logger.rb:26:in `call'
+vendor/bundle/gems/sprockets-rails-3.2.1/lib/sprockets/rails/quiet_assets.rb:13:in `call'
+vendor/bundle/gems/actionpack-5.2.1/lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+vendor/bundle/gems/actionpack-5.2.1/lib/action_dispatch/middleware/request_id.rb:27:in `call'
+vendor/bundle/gems/rack-2.0.5/lib/rack/method_override.rb:22:in `call'
+vendor/bundle/gems/rack-2.0.5/lib/rack/runtime.rb:22:in `call'
+vendor/bundle/gems/activesupport-5.2.1/lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+vendor/bundle/gems/actionpack-5.2.1/lib/action_dispatch/middleware/executor.rb:14:in `call'
+vendor/bundle/gems/actionpack-5.2.1/lib/action_dispatch/middleware/static.rb:127:in `call'
+vendor/bundle/gems/rack-2.0.5/lib/rack/sendfile.rb:111:in `call'
+vendor/bundle/gems/railties-5.2.1/lib/rails/engine.rb:524:in `call'
+vendor/bundle/gems/puma-3.12.0/lib/puma/configuration.rb:225:in `call'
+vendor/bundle/gems/puma-3.12.0/lib/puma/server.rb:658:in `handle_request'
+vendor/bundle/gems/puma-3.12.0/lib/puma/server.rb:472:in `process_client'
+vendor/bundle/gems/puma-3.12.0/lib/puma/server.rb:332:in `block in run'
+vendor/bundle/gems/puma-3.12.0/lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/bands/1" for 127.0.0.1 at 2018-09-13 17:07:34 -0700
+Processing by BandsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBand Load (0.1ms)[0m  [1m[34mSELECT  "bands".* FROM "bands" WHERE "bands"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/bands_controller.rb:36
+  Rendering bands/show.html.erb within layouts/application
+  Rendered bands/show.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11
+Completed 200 OK in 16ms (Views: 9.1ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/bands/1/edit" for 127.0.0.1 at 2018-09-13 17:07:36 -0700
+Processing by BandsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBand Load (2.5ms)[0m  [1m[34mSELECT  "bands".* FROM "bands" WHERE "bands"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/bands_controller.rb:22
+  Rendering bands/edit.html.erb within layouts/application
+  [1m[36mBand Load (1.5ms)[0m  [1m[34mSELECT  "bands".* FROM "bands" WHERE (1) LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/bands/edit.html.erb:3
+  Rendered bands/edit.html.erb within layouts/application (7.3ms)
+Completed 500 Internal Server Error in 30109ms (ActiveRecord: 4.0ms)
+
+
+  
+ActionView::Template::Error (PG::DatatypeMismatch: ERROR:  argument of WHERE must be type boolean, not type integer
+LINE 1: SELECT  "bands".* FROM "bands" WHERE (1) LIMIT $1
+                                              ^
+: SELECT  "bands".* FROM "bands" WHERE (1) LIMIT $1):
+    1: <form action="<%= band_url %>" method="post">
+    2:   <input type="hidden" name="_method" value="patch">
+    3:   <input type="text" name="band[name]" value="<%= Band.find_by(params[:id]).name %>">
+    4:   <input type="submit" value="Edit Band">
+    5: </form>
+  
+app/views/bands/edit.html.erb:3:in `_app_views_bands_edit_html_erb__4158951590945355155_69813622422920'
+app/controllers/bands_controller.rb:23:in `edit'
+Started GET "/bands/1/" for 127.0.0.1 at 2018-09-13 17:08:10 -0700
+Processing by BandsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBand Load (0.1ms)[0m  [1m[34mSELECT  "bands".* FROM "bands" WHERE "bands"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/bands_controller.rb:35
+  Rendering bands/show.html.erb within layouts/application
+  Rendered bands/show.html.erb within layouts/application (0.5ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11
+Completed 200 OK in 17ms (Views: 9.7ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/bands/1/edit" for 127.0.0.1 at 2018-09-13 17:08:12 -0700
+Processing by BandsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBand Load (0.3ms)[0m  [1m[34mSELECT  "bands".* FROM "bands" WHERE "bands"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/bands_controller.rb:21
+  Rendering bands/edit.html.erb within layouts/application
+  [1m[36mBand Load (1.3ms)[0m  [1m[34mSELECT  "bands".* FROM "bands" WHERE (1) LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/bands/edit.html.erb:3
+  Rendered bands/edit.html.erb within layouts/application (5.5ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 1.6ms)
+
+
+  
+ActionView::Template::Error (PG::DatatypeMismatch: ERROR:  argument of WHERE must be type boolean, not type integer
+LINE 1: SELECT  "bands".* FROM "bands" WHERE (1) LIMIT $1
+                                              ^
+: SELECT  "bands".* FROM "bands" WHERE (1) LIMIT $1):
+    1: <form action="<%= band_url %>" method="post">
+    2:   <input type="hidden" name="_method" value="patch">
+    3:   <input type="text" name="band[name]" value="<%= Band.find_by(params[:id]).name %>">
+    4:   <input type="submit" value="Edit Band">
+    5: </form>
+  
+app/views/bands/edit.html.erb:3:in `_app_views_bands_edit_html_erb__4158951590945355155_69813753922680'
+app/controllers/bands_controller.rb:22:in `edit'
+Started GET "/bands/1/" for 127.0.0.1 at 2018-09-13 17:09:22 -0700
+Processing by BandsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBand Load (0.8ms)[0m  [1m[34mSELECT  "bands".* FROM "bands" WHERE "bands"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/bands_controller.rb:35
+  Rendering bands/show.html.erb within layouts/application
+  Rendered bands/show.html.erb within layouts/application (0.7ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11
+Completed 200 OK in 23ms (Views: 18.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/bands/1/edit" for 127.0.0.1 at 2018-09-13 17:09:24 -0700
+Processing by BandsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBand Load (0.4ms)[0m  [1m[34mSELECT  "bands".* FROM "bands" WHERE "bands"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/bands_controller.rb:21
+  Rendering bands/edit.html.erb within layouts/application
+  [1m[36mCACHE Band Load (0.0ms)[0m  [1m[34mSELECT  "bands".* FROM "bands" WHERE "bands"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/bands/edit.html.erb:3
+  Rendered bands/edit.html.erb within layouts/application (3.0ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11
+Completed 200 OK in 40ms (Views: 36.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/bands/1/" for 127.0.0.1 at 2018-09-13 17:09:46 -0700
+Processing by BandsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering bands/show.html.erb within layouts/application
+  [1m[36mBand Load (0.1ms)[0m  [1m[34mSELECT  "bands".* FROM "bands" WHERE "bands"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/bands/show.html.erb:2
+  Rendered bands/show.html.erb within layouts/application (6.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11
+Completed 200 OK in 16ms (Views: 13.3ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/bands/1/edit" for 127.0.0.1 at 2018-09-13 17:11:45 -0700
+Processing by BandsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  Rendering bands/edit.html.erb within layouts/application
+  [1m[36mBand Load (0.1ms)[0m  [1m[34mSELECT  "bands".* FROM "bands" WHERE "bands"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/bands/edit.html.erb:3
+  Rendered bands/edit.html.erb within layouts/application (5.8ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11
+Completed 200 OK in 16ms (Views: 12.9ms | ActiveRecord: 2.6ms)
+
+
+Started PATCH "/bands/1" for 127.0.0.1 at 2018-09-13 17:11:52 -0700
+Processing by BandsController#update as HTML
+  Parameters: {"band"=>{"name"=>"Gritty"}, "id"=>"1"}
+Can't verify CSRF token authenticity.
+  [1m[36mBand Load (1.2ms)[0m  [1m[34mSELECT  "bands".* FROM "bands" WHERE (1) LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/bands_controller.rb:25
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 1.2ms)
+
+
+  
+ActiveRecord::StatementInvalid (PG::DatatypeMismatch: ERROR:  argument of WHERE must be type boolean, not type integer
+LINE 1: SELECT  "bands".* FROM "bands" WHERE (1) LIMIT $1
+                                              ^
+: SELECT  "bands".* FROM "bands" WHERE (1) LIMIT $1):
+  
+app/controllers/bands_controller.rb:25:in `update'
+Started GET "/bands/1" for 127.0.0.1 at 2018-09-13 17:12:17 -0700
+Processing by BandsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering bands/show.html.erb within layouts/application
+  [1m[36mBand Load (0.1ms)[0m  [1m[34mSELECT  "bands".* FROM "bands" WHERE "bands"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/bands/show.html.erb:2
+  Rendered bands/show.html.erb within layouts/application (6.6ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11
+Completed 200 OK in 19ms (Views: 15.3ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/bands/1/edit" for 127.0.0.1 at 2018-09-13 17:12:19 -0700
+Processing by BandsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  Rendering bands/edit.html.erb within layouts/application
+  [1m[36mBand Load (0.4ms)[0m  [1m[34mSELECT  "bands".* FROM "bands" WHERE "bands"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/bands/edit.html.erb:3
+  Rendered bands/edit.html.erb within layouts/application (3.3ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11
+Completed 200 OK in 32ms (Views: 30.1ms | ActiveRecord: 0.9ms)
+
+
+Started PATCH "/bands/1" for 127.0.0.1 at 2018-09-13 17:12:29 -0700
+Processing by BandsController#update as HTML
+  Parameters: {"band"=>{"name"=>"Infected Mushroom"}, "id"=>"1"}
+Can't verify CSRF token authenticity.
+  [1m[36mBand Load (2.3ms)[0m  [1m[34mSELECT  "bands".* FROM "bands" WHERE (1) LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ (byebug):1
+Started GET "/bands/1/" for 127.0.0.1 at 2018-09-13 17:15:36 -0700
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/bundle/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by BandsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering bands/show.html.erb within layouts/application
+  [1m[36mBand Load (0.2ms)[0m  [1m[34mSELECT  "bands".* FROM "bands" WHERE "bands"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/bands/show.html.erb:2
+  Rendered bands/show.html.erb within layouts/application (9.8ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11
+Completed 200 OK in 199ms (Views: 191.1ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/bands/1/edit" for 127.0.0.1 at 2018-09-13 17:15:38 -0700
+Processing by BandsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  Rendering bands/edit.html.erb within layouts/application
+  [1m[36mBand Load (1.1ms)[0m  [1m[34mSELECT  "bands".* FROM "bands" WHERE "bands"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/bands/edit.html.erb:3
+  Rendered bands/edit.html.erb within layouts/application (3.9ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11
+Completed 200 OK in 28ms (Views: 25.7ms | ActiveRecord: 1.6ms)
+
+
+Started PATCH "/bands/1" for 127.0.0.1 at 2018-09-13 17:15:43 -0700
+Processing by BandsController#update as HTML
+  Parameters: {"band"=>{"name"=>"Infected Mushroom"}, "id"=>"1"}
+Can't verify CSRF token authenticity.
+  [1m[36mBand Load (0.4ms)[0m  [1m[34mSELECT  "bands".* FROM "bands" WHERE "bands"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/bands_controller.rb:25
+No template found for BandsController#update, rendering head :no_content
+Completed 204 No Content in 77ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/bands/1/" for 127.0.0.1 at 2018-09-13 17:16:51 -0700
+Processing by BandsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering bands/show.html.erb within layouts/application
+  [1m[36mBand Load (0.1ms)[0m  [1m[34mSELECT  "bands".* FROM "bands" WHERE "bands"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/bands/show.html.erb:2
+  Rendered bands/show.html.erb within layouts/application (7.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11
+Completed 200 OK in 18ms (Views: 13.9ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/bands/1/edit" for 127.0.0.1 at 2018-09-13 17:16:53 -0700
+Processing by BandsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  Rendering bands/edit.html.erb within layouts/application
+  [1m[36mBand Load (0.6ms)[0m  [1m[34mSELECT  "bands".* FROM "bands" WHERE "bands"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/bands/edit.html.erb:3
+  Rendered bands/edit.html.erb within layouts/application (4.2ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11
+Completed 200 OK in 49ms (Views: 46.8ms | ActiveRecord: 0.9ms)
+
+
+Started PATCH "/bands/1" for 127.0.0.1 at 2018-09-13 17:16:58 -0700
+Processing by BandsController#update as HTML
+  Parameters: {"band"=>{"name"=>"Infected Mushroom"}, "id"=>"1"}
+Can't verify CSRF token authenticity.
+  [1m[36mBand Load (0.5ms)[0m  [1m[34mSELECT  "bands".* FROM "bands" WHERE "bands"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/bands_controller.rb:25
+Redirected to http://localhost:3000/bands/1
+Completed 302 Found in 4ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/bands/1" for 127.0.0.1 at 2018-09-13 17:16:58 -0700
+Processing by BandsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering bands/show.html.erb within layouts/application
+  [1m[36mBand Load (0.3ms)[0m  [1m[34mSELECT  "bands".* FROM "bands" WHERE "bands"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/bands/show.html.erb:2
+  Rendered bands/show.html.erb within layouts/application (1.8ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11
+Completed 200 OK in 20ms (Views: 18.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/bands/1/edit" for 127.0.0.1 at 2018-09-13 17:19:58 -0700
+Processing by BandsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  Rendering bands/edit.html.erb within layouts/application
+  [1m[36mBand Load (0.1ms)[0m  [1m[34mSELECT  "bands".* FROM "bands" WHERE "bands"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/bands/edit.html.erb:3
+  Rendered bands/edit.html.erb within layouts/application (6.4ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11
+Completed 200 OK in 17ms (Views: 14.4ms | ActiveRecord: 2.7ms)
+
+
+Started PATCH "/bands/1" for 127.0.0.1 at 2018-09-13 17:20:05 -0700
+Processing by BandsController#update as HTML
+  Parameters: {"band"=>{"name"=>"Infected Mushroom"}, "id"=>"1"}
+Can't verify CSRF token authenticity.
+  [1m[36mBand Load (1.9ms)[0m  [1m[34mSELECT  "bands".* FROM "bands" WHERE "bands"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/bands_controller.rb:25
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/bands_controller.rb:28
+  [1m[36mBand Update (0.7ms)[0m  [1m[33mUPDATE "bands" SET "name" = $1, "updated_at" = $2 WHERE "bands"."id" = $3[0m  [["name", "Infected Mushroom"], ["updated_at", "2018-09-14 00:20:05.395333"], ["id", 1]]
+  ↳ app/controllers/bands_controller.rb:28
+  [1m[35m (4.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/bands_controller.rb:28
+Redirected to http://localhost:3000/bands/1
+Completed 302 Found in 17ms (ActiveRecord: 7.0ms)
+
+
+Started GET "/bands/1" for 127.0.0.1 at 2018-09-13 17:20:05 -0700
+Processing by BandsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering bands/show.html.erb within layouts/application
+  [1m[36mBand Load (0.2ms)[0m  [1m[34mSELECT  "bands".* FROM "bands" WHERE "bands"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/bands/show.html.erb:2
+  Rendered bands/show.html.erb within layouts/application (1.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11
+Completed 200 OK in 18ms (Views: 16.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/bands/22" for 127.0.0.1 at 2018-09-13 17:20:19 -0700
+Processing by BandsController#show as HTML
+  Parameters: {"id"=>"22"}
+  Rendering bands/show.html.erb within layouts/application
+  [1m[36mBand Load (0.1ms)[0m  [1m[34mSELECT  "bands".* FROM "bands" WHERE "bands"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/views/bands/show.html.erb:2
+  Rendered bands/show.html.erb within layouts/application (5.2ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    1: <br>
+    2: <%= Band.find_by(id: params[:id]).name %>
+    3: 
+    4: <form action="<%= edit_band_url %>" method="get">
+    5:   <input type="submit" value="Edit Band">
+  
+app/views/bands/show.html.erb:2:in `_app_views_bands_show_html_erb___1661318945811817441_47325403666260'
+app/controllers/bands_controller.rb:37:in `show'
+Started GET "/bands" for 127.0.0.1 at 2018-09-13 17:21:22 -0700
+Processing by BandsController#index as HTML
+  Rendering bands/index.html.erb within layouts/application
+  Rendered bands/index.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11
+Completed 200 OK in 12ms (Views: 11.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/bands/22" for 127.0.0.1 at 2018-09-13 17:26:49 -0700
+Processing by BandsController#show as HTML
+  Parameters: {"id"=>"22"}
+  Rendering bands/show.html.erb within layouts/application
+  [1m[36mBand Load (0.3ms)[0m  [1m[34mSELECT  "bands".* FROM "bands" WHERE "bands"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/views/bands/show.html.erb:2
+  Rendered bands/show.html.erb within layouts/application (2.5ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    1: <br>
+    2: <%= Band.find_by(id: params[:id]).name %>
+    3: 
+    4: <form action="<%= edit_band_url %>" method="get">
+    5:   <input type="submit" value="Edit Band">
+  
+app/views/bands/show.html.erb:2:in `_app_views_bands_show_html_erb___1661318945811817441_69827097078740'
+app/controllers/bands_controller.rb:37:in `show'

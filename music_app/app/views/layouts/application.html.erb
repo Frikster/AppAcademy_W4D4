@@ -5,10 +5,13 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
+    <%= render 'shared/flash_messages' if !flash.empty? %>
+
+
     <% if logged_in? %>
     <form class="" action="<%= session_url %>" method="post">
       <input type="hidden" name="_method" value="delete">
@@ -21,5 +24,3 @@
     <%= yield %>
   </body>
 </html>
-
-Create login/signup views and edit application.html.erb layout so that a logged in user is displayed a "sign-out" button and a logged-out user is displayed links to sign-up or sign-in pages.

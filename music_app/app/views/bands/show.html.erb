@@ -1,0 +1,6 @@
+<br>
+<%= Band.find_by(id: params[:id]).name %>
+
+<form action="<%= edit_band_url %>" method="get">
+  <input type="submit" value="Edit Band">
+</form>
